@@ -4,10 +4,10 @@
   "description": "This is a test for CK",
   "main": "index.html",
   "scripts": {
-    "start": "npm run lite",
+    "start":"npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
-    "scss": "node-saas -o css/ css/",
+    "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
   },

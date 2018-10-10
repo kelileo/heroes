@@ -1,3 +1,50 @@
 $bg-dark: #272727;
 $color-accent: #e8aa4e;
 $text-pale: #b0b0b0;
+
+body {
+    width: 100%;    
+}
+
+/*.block {
+    display: flex;    
+    flex-direction: column;    
+}*/
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    font-weight: 300;
+    .text-bold {
+        font-weight: 600;
+    }
+}
+
+.main {
+    background: $bg-dark;
+    color: #fff;
+}
+
+/* слайдер */
+.slider-indicators {
+    list-style: square; 
+    display: flex;
+    justify-content: space-between;
+    width: 45px;   
+}
+
+.slider-indicators li {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;    
+}
+
+
+
+
