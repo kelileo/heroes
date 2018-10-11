@@ -1,18 +1,19 @@
-@charset "UTF-8";
+/* color variables */
+/* dimensional variables */
 body {
-  width: 100%; }
+  font-family: 'Open Sans', sans-serif; }
 
 /*.block {
     display: flex;    
     flex-direction: column;    
-}*/
-.container {
-  display: flex;
-  justify-content: center; }
+}
 
+.container {
+    display: flex;
+    justify-content: center;
+} */
 .header {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
   font-size: 44px;
   font-weight: 300; }
   .header .text-bold {
@@ -22,14 +23,67 @@ body {
   background: #272727;
   color: #fff; }
 
-/* слайдер */
-.slider-indicators {
-  list-style: square;
-  display: flex;
-  justify-content: space-between;
-  width: 45px; }
+/* slider */
+.slider input[name="switch"] {
+  display: none; }
 
-.slider-indicators li {
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer; }
+.controls {
+  text-align: center; }
+
+.controls .btn-label {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 0 4.5px;
+  background: #fff; }
+
+#btn1:checked ~ .controls label[for="btn1"],
+#btn2:checked ~ .controls label[for="btn2"],
+#btn3:checked ~ .controls label[for="btn3"] {
+  background-color: #e8aa4e; }
+
+#btn1:checked ~ .slider-inner .slider-items {
+  transform: translate(0); }
+
+#btn2:checked ~ .slider-inner .slider-items {
+  transform: translate(-1060px); }
+
+#btn3:checked ~ .slider-inner .slider-items {
+  transform: translate(-2120px); }
+
+.slider {
+  margin: 0px auto;
+  padding: 0px 0px;
+  width: 1060px; }
+  .slider .slider-inner {
+    overflow: hidden; }
+    .slider .slider-inner .slider-items {
+      width: 300%;
+      transition: all 0.5s; }
+      .slider .slider-inner .slider-items .item {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 265px;
+        transition: all 0.5s;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff; }
+        .slider .slider-inner .slider-items .item .image {
+          display: block;
+          width: 127px;
+          height: 127px;
+          border-radius: 50%;
+          background: #fff; }
+        .slider .slider-inner .slider-items .item .item-header .name {
+          font-weight: 700; }
+        .slider .slider-inner .slider-items .item .date-info .date {
+          display: block; }
+
+#JeysonSt {
+  background: url("../img/Statham.jpg");
+  background-size: 350%;
+  background-repeat: no-repeat;
+  background-position: 55% 5%; }

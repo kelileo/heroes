@@ -1,24 +1,30 @@
+/* color variables */
 $bg-dark: #272727;
 $color-accent: #e8aa4e;
 $text-pale: #b0b0b0;
 
-body {
-    width: 100%;    
+/* dimensional variables */
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+	margin: 0px auto;
+	padding: $pad-up-dn $pad-left-right;
+}
+
+body {  
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*.block {
     display: flex;    
     flex-direction: column;    
-}*/
+}
 
 .container {
     display: flex;
     justify-content: center;
-}
+} */
 
 .header {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    text-align: center;    
     font-size: 44px;
     font-weight: 300;
     .text-bold {
@@ -31,19 +37,97 @@ body {
     color: #fff;
 }
 
-/* слайдер */
-.slider-indicators {
-    list-style: square; 
-    display: flex;
-    justify-content: space-between;
-    width: 45px;   
+/* slider */
+
+.slider input[name="switch"] {
+    display: none;
+  }
+
+.controls {
+    text-align: center;
 }
 
-.slider-indicators li {
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;    
+.controls .btn-label {
+   display: inline-block;
+   width: 9px;
+   height: 9px;
+   margin: 0 4.5px;
+   background: #fff;
+} 
+
+#btn1:checked ~ .controls label[for="btn1"],
+#btn2:checked ~ .controls label[for="btn2"],
+#btn3:checked ~ .controls label[for="btn3"] {
+    background-color: $color-accent;
+  }
+
+#btn1:checked ~ .slider-inner .slider-items {
+  transform: translate(0);
 }
+
+#btn2:checked ~ .slider-inner .slider-items {
+  transform: translate(-1060px);
+}
+
+#btn3:checked ~ .slider-inner .slider-items {
+  transform: translate(-2120px);
+}
+  
+
+.slider {
+    @include zero-margin(0px,0px);
+    width: 1060px;
+
+    .slider-inner {        
+        overflow: hidden;
+
+        .slider-items { 
+            width: 300%;
+            transition: all 0.5s;
+
+            .item {
+                float: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 265px;
+                transition: all 0.5s;
+                font-size: 14px;
+                font-weight: 400;
+                color: #fff;
+                .image {
+                    display: block;
+                    width: 127px;
+                    height: 127px;
+                    border-radius: 50%;
+                    background: #fff;
+                }
+                .item-header {
+                    .name {
+                        font-weight: 700;
+                    }                    
+                }
+                .date-info {
+                    .date { 
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#JeysonSt {
+    background: url("../img/Statham.jpg");
+    background-size: 350%;
+    background-repeat: no-repeat;
+    background-position: 55% 5%;
+}
+
+
+
+
 
 
 
