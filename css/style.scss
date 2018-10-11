@@ -9,41 +9,89 @@ $text-pale: #b0b0b0;
 	padding: $pad-up-dn $pad-left-right;
 }
 
+/* основные */
+
 body {  
     font-family: 'Open Sans', sans-serif;
+    min-width: 1280px;
 }
 
-/*.block {
-    display: flex;    
-    flex-direction: column;    
+.block {
+    display: block;
+    width: 100%;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-} */
-
-.header {
-    text-align: center;    
-    font-size: 44px;
-    font-weight: 300;
-    .text-bold {
-        font-weight: 600;
-    }
-}
-
-.main {
+.main-block {
     background: $bg-dark;
     color: #fff;
+    height: 726px;
 }
 
-/* slider */
+.main-block .header {
+    position: relative;
+    top: 83px;
+    padding-left: 2px;
+}
+
+.secondary-block .header {
+    position: relative;
+    top: 92px;
+    padding-left: 10px;
+}
+
+.secondary-block {
+    height: 703px;
+}
+
+.header {    
+    text-align: center;    
+    font-size: 44px;
+
+    .title {
+        font-weight: 300;
+        .text-bold {
+            font-weight: 600;
+        }
+    }    
+}
+
+.separator .line {
+    margin: 0 auto; 
+    background: $color-accent;
+    height: 4px;
+}
+
+.secondary-block .separator {
+    padding-right: 10px;
+}
+
+.separator .line:first-child {
+    margin-top: 20px;   
+    width: 98px;
+}
+
+.separator .line:last-child {
+    margin-top: 10px; 
+    width: 66px;
+    opacity: 0.7;
+}
+
+.footer {
+    background: $bg-dark;
+    width: 100%;
+    height: 92px;
+}
+
+
+/* слайдер */
 
 .slider input[name="switch"] {
     display: none;
   }
 
 .controls {
+    position: relative;
+    top: 85px;
     text-align: center;
 }
 
@@ -66,17 +114,19 @@ body {
 }
 
 #btn2:checked ~ .slider-inner .slider-items {
-  transform: translate(-1060px);
+  transform: translate(-1164px);
 }
 
 #btn3:checked ~ .slider-inner .slider-items {
-  transform: translate(-2120px);
+  transform: translate(-2328px);
 }
   
 
 .slider {
-    @include zero-margin(0px,0px);
-    width: 1060px;
+    margin: 0 auto;
+    position: relative;
+    top: 175px;
+    width: 1164px;
 
     .slider-inner {        
         overflow: hidden;
@@ -91,11 +141,12 @@ body {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                width: 265px;
-                transition: all 0.5s;
-                font-size: 14px;
+                width: 291px;
+                transition: all 0.5s;                
+                line-height: 24px;
                 font-weight: 400;
                 color: #fff;
+
                 .image {
                     display: block;
                     width: 127px;
@@ -103,12 +154,21 @@ body {
                     border-radius: 50%;
                     background: #fff;
                 }
-                .item-header {
+                .item-header {                    
+                    padding-top: 18px;
+
                     .name {
+                        font-size: 20px;
                         font-weight: 700;
-                    }                    
+                    }  
+                    .nikname {
+                        font-size: 16px;
+                    }                  
                 }
                 .date-info {
+                    padding-top: 27px;
+                    font-size: 14px;
+
                     .date { 
                         display: block;
                     }
@@ -118,12 +178,95 @@ body {
     }
 }
 
-#JeysonSt {
+/* #JeysonSt {
     background: url("../img/Statham.jpg");
     background-size: 350%;
     background-repeat: no-repeat;
     background-position: 55% 5%;
 }
+*/
+
+/* форма */
+
+.form {
+    margin: 0 auto;
+    position: relative;
+    top: 147px;
+    width: 750px;
+    .form-inputs {
+        display: flex;
+        justify-content: space-between;  
+        .form-group-control {    
+                width: 360px;
+                height: 40px;
+            }      
+    }
+
+    .form-loading {
+        margin-top: 24px;
+        .form-group-loading  {
+            width: 100%;
+            height: 116px;
+        }
+    }            
+}
+
+.form-group-label {
+    font-size: 14px;
+}
+
+.form-group-label::after {
+    content: " *";
+    color: #bb0100;
+}
+
+input[type="text"] {
+    display: block;
+    margin-top: 5px;
+}
+
+input[id="loading"] {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.btn-submit {
+    color: #fff;
+    background: $color-accent;
+    border: none;
+    width: 165px;
+    height: 40px;
+    position: relative;
+    top: 87px;
+    float: right;
+}
+
+/* -- убираем браузерную обводку и добавляем тень -- */
+.btn-submit:active, .btn-submit:focus {
+    outline: none !important;
+  }
+  
+.btn-submit::-moz-focus-inner {
+    border: 0 !important;
+}
+  
+.btn-submit:active, .btn-submit:focus {
+    outline: none !important;
+    box-shadow: inset 2px 1px 8px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

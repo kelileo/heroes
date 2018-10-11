@@ -9,10 +9,12 @@
     <title>Heroes</title>
 </head>
 <body>
-    <div class="main block">
+    <div class="block main-block">
         <header class="header">
-            <div class="title">МОЯ <span class="text-bold">СУПЕР КОМАНДА</span></div>
-            <div class="separator"></div>
+            <div class="title">
+                <h1>МОЯ <span class="text-bold">СУПЕР КОМАНДА</span></h1>
+            </div>
+            <div class="separator"><div class="line"></div><div class="line"></div></div>
         </header>
 
         <div class="slider">
@@ -21,8 +23,8 @@
             <input type="radio" name="switch" id="btn3">
 
             <div class="slider-inner">
-
                 <div class="slider-items">
+
                     <div class="item">
                         <div id="JeysonSt" class="image"></div>
                         <div class="item-header">
@@ -120,10 +122,9 @@
                             <div class="nickname">Никнейм</div>
                         </div>
                         <div class="date-info">Дата вступления в команду: <span class="date">00.00.0000</span></div>
-                    </div>
-                         
-                </div>
+                    </div>   
 
+                </div>
             </div>
             <div class="controls">
                 <label class="btn-label" for="btn1"></label>
@@ -133,14 +134,46 @@
         </div>
 
     </div>
-    <div class="secondary block">
+    <div class="block secondary-block">
         <header class="header">
-            <div class="title">ДОБАВЬ СВОЕГО <span class="text-bold">ГЕРОЯ</span></div>
-            <div class="separator"></div>
+            <div class="title">
+                <h1>ДОБАВЬ СВОЕГО <span class="text-bold">ГЕРОЯ</span></h1>
+            </div>
+            <div class="separator"><div class="line"></div><div class="line"></div></div>
         </header>
-        <div class="form"></div>
+        <div class="form">
+            <form>
+                <div class="form-inputs">
+                    <div class="form-group">
+                        <label class="form-group-label" for="name">Имя</label>
+                        <input type="text" 
+                               class="form-group-control" 
+                               id="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group-label" for="titul">Титул</label>
+                        <input type="text" 
+                               class="form-group-control" 
+                               id="titul">
+                    </div>
+                </div>
+                <div class="form-loading">
+                    <div class="form-group">
+                        <label class="form-group-label" for="loading">Фото</label>
+                        <input type="text" 
+                               class="form-group-loading" 
+                               id="loading" 
+                               placeholder="Чтобы добавить фото героя перетащите изображение в это поле или просто кликните сюда">
+                    </div>
+                </div> 
+                <button type="submit" class="btn-submit">ПРИНЯТЬ</button>                     
+            </form>
+        </div>
     </div>
-    <footer></footer>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <footer class="footer">
+        <div class="footer-caption"></div>
+        <div class="social-buttons"></div>
+    </footer>
+    <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script> -->
 </body>
 </html>
