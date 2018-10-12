@@ -1,9 +1,11 @@
 @charset "UTF-8";
-/* color variables */
-/* dimensional variables */
-/* основные */
+/* -- color variables -- */
+/* -- dimensional variables -- */
+/* -- основные стили -- */
+html {
+  font-family: 'Open Sans', sans-serif; }
+
 body {
-  font-family: 'Open Sans', sans-serif;
   min-width: 1280px; }
 
 .block {
@@ -16,12 +18,10 @@ body {
   height: 726px; }
 
 .main-block .header {
-  position: relative;
   top: 83px;
   padding-left: 2px; }
 
 .secondary-block .header {
-  position: relative;
   top: 92px;
   padding-left: 10px; }
 
@@ -29,6 +29,7 @@ body {
   height: 703px; }
 
 .header {
+  position: relative;
   text-align: center;
   font-size: 44px; }
   .header .title {
@@ -41,9 +42,6 @@ body {
   background: #e8aa4e;
   height: 4px; }
 
-.secondary-block .separator {
-  padding-right: 10px; }
-
 .separator .line:first-child {
   margin-top: 20px;
   width: 98px; }
@@ -53,12 +51,10 @@ body {
   width: 66px;
   opacity: 0.7; }
 
-.footer {
-  background: #272727;
-  width: 100%;
-  height: 92px; }
+.secondary-block .separator {
+  padding-right: 10px; }
 
-/* слайдер */
+/* -- слайдер -- */
 .slider input[name="switch"] {
   display: none; }
 
@@ -135,7 +131,7 @@ body {
     background-position: 55% 5%;
 }
 */
-/* форма */
+/* -- форма -- */
 .form {
   margin: 0 auto;
   position: relative;
@@ -152,6 +148,17 @@ body {
     .form .form-loading .form-group-loading {
       width: 100%;
       height: 116px; }
+  .form .btn-submit {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    background: #e8aa4e;
+    border: none;
+    width: 165px;
+    height: 40px;
+    position: relative;
+    top: 83px;
+    float: right; }
 
 .form-group-label {
   font-size: 14px; }
@@ -169,17 +176,7 @@ input[id="loading"] {
   font-weight: 300;
   text-align: center; }
 
-.btn-submit {
-  color: #fff;
-  background: #e8aa4e;
-  border: none;
-  width: 165px;
-  height: 40px;
-  position: relative;
-  top: 87px;
-  float: right; }
-
-/* -- убираем браузерную обводку и добавляем тень -- */
+/* -- убираем браузерную обводку кнопки и добавляем тень -- */
 .btn-submit:active, .btn-submit:focus {
   outline: none !important; }
 
@@ -189,3 +186,42 @@ input[id="loading"] {
 .btn-submit:active, .btn-submit:focus {
   outline: none !important;
   box-shadow: inset 2px 1px 8px rgba(0, 0, 0, 0.5); }
+
+/* -- футер -- */
+.footer {
+  background: #272727;
+  color: #b0b0b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 92px; }
+  .footer .footer-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 72.5%;
+    min-width: 400px; }
+    .footer .footer-box .footer-caption {
+      font-size: 12px;
+      line-height: 54px;
+      letter-spacing: 0.025em;
+      display: block; }
+    .footer .footer-box .social-buttons {
+      width: 166px;
+      display: flex;
+      justify-content: space-between; }
+      .footer .footer-box .social-buttons .social-icon {
+        display: inline-block;
+        width: 31px;
+        height: 31px;
+        background: url("../img/css_sprites.png"); }
+      .footer .footer-box .social-buttons .facebook {
+        background-position: -1px -1px; }
+      .footer .footer-box .social-buttons .twitter {
+        background-position: -100px -1px; }
+      .footer .footer-box .social-buttons .google {
+        background-position: -34px -1px; }
+      .footer .footer-box .social-buttons .linkedn {
+        background-position: -67px -1px; }
