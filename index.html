@@ -2,10 +2,12 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/> 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
     <title>Heroes</title>
 </head>
 <body>
@@ -16,13 +18,19 @@
         </header>
 
         <div class="slider">
-            <input type="radio" name="switch" id="btn1" checked>
+         <!--    <input type="radio" name="switch" id="btn1" checked>
             <input type="radio" name="switch" id="btn2">
             <input type="radio" name="switch" id="btn3">
+            
+            <input type="radio" name="switch" id="btn4">
+
+           
+            <input type="radio" name="switch" id="btn5">
+            <input type="radio" name="switch" id="btn6">
 
             <div class="slider-inner">
-                <div class="slider-items">
-
+                <div class="slider-items"> -->
+                    
                     <div class="item">
                         <div id="JeysonSt" class="image"></div>
                         <div class="item-header">
@@ -106,13 +114,24 @@
                     </div>
 
                 </div>
-            </div>
+           <!-- </div> 
             <div class="controls">
                 <label class="btn-label" for="btn1"></label>
                 <label class="btn-label" for="btn2"></label>
                 <label class="btn-label" for="btn3"></label>
+
+                
+                <label class="btn-label hidden" for="btn4"></label>
+
+                
+                <label class="btn-label hidden" for="btn5"></label>
+                <label class="btn-label hidden" for="btn6"></label>                
             </div>
-        </div>
+            <div class="arrows">
+                <button class="btn-arrow" id="prev">&lt;</button>
+                <button class="btn-arrow" id="next">&gt;</button>
+            </div>
+        </div> -->
 
     </div>
     <div class="block secondary-block">
@@ -142,7 +161,8 @@
                         <input type="text" 
                                class="form-group-loading" 
                                id="loading" 
-                               placeholder="Чтобы добавить фото героя перетащите изображение в это поле или просто кликните сюда">
+                               placeholder="Чтобы добавить фото героя перетащите изображение в это поле или просто кликните сюда"
+                               readonly>
                     </div>
                 </div> 
                 <button type="submit" class="btn-submit">ПРИНЯТЬ</button>                     
@@ -158,10 +178,13 @@
                 <a href="#" class="social-icon google" role="button"></a> 
                 <a href="#" class="social-icon linkedn" role="button"></a>
             </div>
-        </div>
-        
-        
+        </div>      
     </footer>
-    <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script> -->
-</body>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+
+    </body>
 </html>

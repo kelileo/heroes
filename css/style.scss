@@ -13,16 +13,17 @@ $text-pale: #b0b0b0;
 /* -- основные стили -- */
 
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; 
 }
 
-body {    
-    min-width: 1280px;
+body {  
+    width: 100%;  
+   /* min-width: 1280px; */
 }
 
 .block {
     display: block;
-    width: 100%;
+    position: relative;  
 }
 
 .main-block {
@@ -81,98 +82,6 @@ body {
 
 /* -- слайдер -- */
 
-.slider input[name="switch"] {
-    display: none;
-  }
-
-.controls {
-    position: relative;
-    top: 85px;
-    text-align: center;
-}
-
-.controls .btn-label {
-   display: inline-block;
-   width: 9px;
-   height: 9px;
-   margin: 0 4.5px;
-   background: #fff;
-} 
-
-#btn1:checked ~ .controls label[for="btn1"],
-#btn2:checked ~ .controls label[for="btn2"],
-#btn3:checked ~ .controls label[for="btn3"] {
-    background-color: $color-accent;
-  }
-
-#btn1:checked ~ .slider-inner .slider-items {
-  transform: translate(0);
-}
-
-#btn2:checked ~ .slider-inner .slider-items {
-  transform: translate(-1164px);
-}
-
-#btn3:checked ~ .slider-inner .slider-items {
-  transform: translate(-2328px);
-}
-  
-
-.slider {
-    margin: 0 auto;
-    position: relative;
-    top: 175px;
-    width: 1164px;
-
-    .slider-inner {        
-        overflow: hidden;
-
-        .slider-items { 
-            width: 300%;
-            transition: all 0.5s;
-
-            .item {
-                float: left;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                width: 291px;
-                transition: all 0.5s;                
-                line-height: 24px;
-                font-weight: 400;
-                color: $text-white;
-
-                .image {
-                    display: block;
-                    width: 127px;
-                    height: 127px;
-                    border-radius: 50%;
-                    background: #fff;
-                }
-                .item-header {                    
-                    padding-top: 18px;
-
-                    .name {
-                        font-size: 20px;
-                        font-weight: 700;
-                    }  
-                    .nikname {
-                        font-size: 16px;
-                    }                  
-                }
-                .date-info {
-                    padding-top: 27px;
-                    font-size: 14px;
-
-                    .date { 
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
-}
 
 /* #JeysonSt {
     background: url("../img/Statham.jpg");
@@ -181,6 +90,90 @@ body {
     background-position: 55% 5%;
 }
 */
+
+.slider { 
+    margin: 0 auto;
+    position: relative;
+    top: 175px;
+
+        .item {
+        width: 291px;           
+        margin-left: 0;   
+        display: inline-block;  
+        text-align: center;              
+        line-height: 24px;
+        font-weight: 400;
+        color: $text-white;
+
+        .image {
+            display: block;
+            margin: 0 auto;
+            width: 127px;
+            height: 127px;
+            border-radius: 50%;
+            background: #fff;
+        }
+        .item-header {                    
+            padding-top: 18px;
+
+            .name {
+                font-size: 20px;
+                font-weight: 700;
+            }  
+            .nikname {
+                font-size: 16px;
+            }                  
+        }
+        .date-info {
+            padding-top: 27px;
+            font-size: 14px;
+
+            .date { 
+                display: block;
+            }
+        }
+    }
+}
+
+/* -- настройка переключателей -- */
+
+.slick-dots {
+    position: relative;
+    top: 25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    width: 9px;
+    height: 9px;
+    padding: 5px;
+    cursor: pointer;
+    background: #fff;
+    border: 0;
+    outline: none;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.slick-dots ul {
+    vertical-align: baseline;
+}
+
+.slick-dots .slick-active button {
+    background: $color-accent;
+}
+
 
 /* -- форма -- */
 
@@ -193,6 +186,7 @@ body {
     .form-inputs {
         display: flex;
         justify-content: space-between; 
+        flex-flow: row wrap;
 
         .form-group-control {    
             width: 360px;
@@ -244,11 +238,11 @@ input[id="loading"] {
 
 
 /* -- убираем браузерную обводку кнопки и добавляем тень -- */
-.btn-submit:active, .btn-submit:focus {
+button:active, .button:focus {
     outline: none !important;
   }
   
-.btn-submit::-moz-focus-inner {
+  button::-moz-focus-inner {
     border: 0 !important;
 }
   
@@ -261,12 +255,14 @@ input[id="loading"] {
 
 .footer {
     background: $bg-dark;
-    color: $text-pale;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
+    color: $text-pale;   
     width: 100%;
     height: 92px;
+    display: block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .footer-box {
     display: flex;
@@ -309,6 +305,23 @@ input[id="loading"] {
         }
     }
 }
+
+/* -- адаптив -- */
+
+@media(max-width:1280px) {
+
+}
+
+@media(max-width:600px) {
+
+}
+
+@media(max-width:400px) {
+
+}
+
+
+
 
 
 
