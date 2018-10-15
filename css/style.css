@@ -1,27 +1,22 @@
 @charset "UTF-8";
 /* -- color variables -- */
-/* -- dimensional variables -- */
 /* -- основные стили -- */
 html {
   font-family: 'Open Sans', sans-serif; }
 
 body {
-  height: 100%;
-  /* min-width: 1280px; */ }
+  min-width: 320px; }
 
-.main-block {
+.block {
+  width: 100%; }
+
+.main {
   background: #272727;
-  color: #fff; }
+  color: #fff;
+  height: 726px; }
 
-.main-block .header {
-  top: 83px;
-  padding-left: 2px;
-  margin: 0 20px; }
-
-.secondary-block .header {
-  top: 92px;
-  padding-left: 10px;
-  margin: 0 20px; }
+.secondary {
+  height: 703px; }
 
 .header {
   position: relative;
@@ -31,6 +26,16 @@ body {
     font-weight: 300; }
     .header .title .text-bold {
       font-weight: 600; }
+
+.main .header {
+  top: 83px;
+  padding-left: 2px;
+  margin: 0 20px; }
+
+.secondary .header {
+  top: 93px;
+  padding-left: 10px;
+  margin: 0 20px; }
 
 .separator .line {
   margin: 0 auto;
@@ -46,23 +51,19 @@ body {
   width: 66px;
   opacity: 0.7; }
 
-.secondary-block .separator {
-  padding-right: 10px; }
+.main .separator {
+  padding-right: 5px;
+  margin-top: -1px; }
+
+.secondary .separator {
+  padding-right: 12px;
+  margin-top: -3px; }
 
 /* -- слайдер -- */
-/* #JeysonSt {
-    background: url("../img/Statham.jpg");
-    background-size: 350%;
-    background-repeat: no-repeat;
-    background-position: 55% 5%;
-}
-*/
 .slider-outer {
-  width: 78%;
-  height: 600px;
+  width: 77.8%;
   margin: 0 auto;
-  position: relative;
-  top: 175px; }
+  margin-top: 175px; }
 
 .slider {
   margin: 0 auto; }
@@ -84,6 +85,7 @@ body {
       padding-top: 18px; }
       .slider .item .item-header .name {
         font-size: 20px;
+        line-height: 26px;
         font-weight: 700; }
       .slider .item .item-header .nikname {
         font-size: 16px; }
@@ -96,7 +98,7 @@ body {
 /* -- настройка переключателей -- */
 .slick-dots {
   position: relative;
-  top: 80px;
+  top: 78px;
   display: block;
   width: 100%;
   padding: 0;
@@ -107,16 +109,14 @@ body {
 .slick-dots li button {
   font-size: 0;
   line-height: 0;
-  width: 9px;
-  height: 9px;
-  padding: 5px;
+  padding: 4.5px;
   cursor: pointer;
   background: #fff;
   border: 0;
   outline: none; }
 
 .slick-dots li {
-  margin: 0 5px;
+  margin: 0 6px;
   position: relative;
   display: inline-block; }
 
@@ -126,21 +126,20 @@ body {
 /* -- форма -- */
 .form {
   margin: 0 auto;
-  margin-top: 147px;
-  width: 750px;
-  height: 496px; }
+  margin-top: 150px;
+  width: 750px; }
   .form .form-inputs {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap; }
     .form .form-inputs .form-group-control {
       width: 360px;
-      height: 40px; }
+      height: 42px; }
   .form .form-loading {
     margin-top: 24px; }
     .form .form-loading .form-group-loading {
       width: 100%;
-      height: 116px; }
+      height: 110px; }
   .form .btn-row {
     text-align: end; }
     .form .btn-row .btn-submit {
@@ -150,11 +149,12 @@ body {
       background: #e8aa4e;
       border: none;
       width: 165px;
-      height: 40px;
+      height: 41px;
       position: relative;
-      top: 83px; }
+      top: 85px; }
 
 .form-group-label {
+  margin-left: -2px;
   font-size: 14px; }
 
 .form-group-label::after {
@@ -171,6 +171,39 @@ input[id="loading"] {
   text-align: center;
   word-wrap: wrap; }
 
+.error-msg {
+  display: none;
+  margin: 0 0 10px 0;
+  color: #fff;
+  background: #bb0100;
+  height: 30px;
+  margin-left: -2px;
+  font-size: 14px;
+  padding: 5px 0 5px 10px; }
+
+.input_error {
+  border: 1px solid #bb0100; }
+
+.form_invalid .error-msg {
+  display: block; }
+
+/* -- фотографии -- */
+#JeysonSt {
+  background: url("../img/Statham.jpg");
+  background-position: 56% 0%; }
+
+#VanDamm {
+  background: url("../img/vandamm.jpeg");
+  background-position: 70% 20%; }
+
+#SilvesrSt {
+  background: url("../img/Stallone.jpg");
+  background-position: 55% 5%; }
+
+#JetLi {
+  background: url("../img/JetLi.jpg");
+  background-position: 45% 5%; }
+
 /* -- убираем браузерную обводку кнопки и добавляем тень -- */
 button:active, .button:focus {
   outline: none !important; }
@@ -178,7 +211,7 @@ button:active, .button:focus {
 button::-moz-focus-inner {
   border: 0 !important; }
 
-.btn-submit:active, .btn-submit:focus {
+.btn-submit:active {
   outline: none !important;
   box-shadow: inset 2px 1px 8px rgba(0, 0, 0, 0.5); }
 
@@ -192,7 +225,7 @@ button::-moz-focus-inner {
   align-items: center;
   background: #272727; }
   .footer .footer-box {
-    width: 80%;
+    width: 75%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -202,8 +235,11 @@ button::-moz-focus-inner {
       letter-spacing: 0.025em;
       display: block;
       text-align: center;
-      padding: 10px 0;
-      margin: 0 20px; }
+      padding-top: 3px;
+      padding-left: 17px;
+      margin-right: 20px; }
+      .footer .footer-box .footer-caption .company {
+        font-weight: 700; }
     .footer .footer-box .social-buttons {
       width: 166px;
       display: flex;
@@ -229,7 +265,23 @@ button::-moz-focus-inner {
   .form {
     width: 360px; }
   .footer .footer-box {
-    justify-content: center; } }
+    justify-content: center; }
+  .secondary {
+    height: 797px; }
+  .form-inputs .form-group:nth-child(2) {
+    margin-top: 24px; } }
+
+@media (max-width: 710px) {
+  .footer .footer-box .social-buttons {
+    margin-top: 8px; } }
+
+@media (max-width: 528px) {
+  .main {
+    height: 770px; } }
+
+@media (max-width: 548px) {
+  .secondary {
+    height: 850px; } }
 
 @media (max-width: 400px) {
   .form {

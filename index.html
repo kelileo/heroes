@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="main-block">
+    <div class="main block">
         <header class="header">
             <h1 class="title">МОЯ <span class="text-bold">СУПЕР КОМАНДА</span></h1>
             <div class="separator"><div class="line"></div><div class="line"></div></div>
@@ -106,24 +106,28 @@
             </div> 
     </div>
 
-    <div class="secondary-block">
+    <div class="secondary block">
         <header class="header">
-            <h1 class="title">ДОБАВЬ СВОЕГО <span class="text-bold">ГЕРОЯ</span></h1>
+            <h1 class="title">ДОБАВЬ&nbsp;СВОЕГО <span class="text-bold">ГЕРОЯ</span></h1>
             <div class="separator"><div class="line"></div><div class="line"></div></div>
         </header>
-            <form class="form">
+            <form id="add-hero" class="form">
+                <p class="error-msg">Пожалуйста, заполните все поля</p>
+
                 <div class="form-inputs">
                     <div class="form-group">
                         <label class="form-group-label" for="name">Имя</label>
                         <input type="text" 
                                class="form-group-control" 
-                               id="name">
+                               id="name"
+                               data-required>
                     </div>
                     <div class="form-group">
                         <label class="form-group-label" for="titul">Титул</label>
                         <input type="text" 
                                class="form-group-control" 
-                               id="titul">
+                               id="titul"
+                               data-required>
                     </div>
                 </div>
                 <div class="form-loading">
@@ -131,7 +135,8 @@
                         <label class="form-group-label" for="loading">Фото</label>
                         <input type="text" 
                                class="form-group-loading" 
-                               id="loading" 
+                               id="loading"
+                               data-required 
                                placeholder="Чтобы добавить фото героя перетащите изображение в это поле или просто кликните сюда">
                     </div>
                 </div>
@@ -143,7 +148,7 @@
     
     <footer class="footer">
         <div class="footer-box">
-            <p class="footer-caption">ALL RIGHTS RESERVED. COPYRIGHT &copy;&nbsp;CKDIGITAL</p>
+            <p class="footer-caption">ALL RIGHTS RESERVED. COPYRIGHT &copy;&nbsp;<span class="company">CKDIGITAL</span></p>
             <div class="social-buttons">  
                 <a href="#" class="social-icon facebook" role="button"></a> 
                 <a href="#" class="social-icon twitter" role="button"></a> 
@@ -156,7 +161,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
-
+    <script src="js/slick-script.js"></script>
+    <script src="js/validate.js"></script>
     </body>
 </html>

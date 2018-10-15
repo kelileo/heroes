@@ -1,11 +1,5 @@
-//отключаем перезагрузку страницы по клику
-var button = document.querySelector('.btn-submit');
-button.addEventListener('click', function(event) {
-   event.preventDefault();
-});
-
-
 //слайдер
+
 $('.slider').slick({
     dots: true,
     infinite: false,
