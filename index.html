@@ -10,7 +10,6 @@
     <title>Heroes</title>
 </head>
 <body>
-
     <div class="main block">
         <header class="header">
             <h1 class="title">МОЯ <span class="text-bold">СУПЕР КОМАНДА</span></h1>
@@ -52,7 +51,7 @@
                         </div>
                         <p class="date-info">Дата вступления в команду: <span class="date">27.02.1973</span></p>
                     </div>
-                    <!-- пустые герои для слайдера -->
+                    <!-- неизвестные герои для слайдера -->
                     <div class="item">
                         <div id="" class="image"></div>
                         <div class="item-header">
@@ -102,8 +101,8 @@
                         <p class="date-info">Дата вступления в команду: <span class="date">00.00.0000</span></p>
                     </div>
 
-                </div>
-            </div> 
+            </div>
+        </div> 
     </div>
 
     <div class="secondary block">
@@ -111,39 +110,43 @@
             <h1 class="title">ДОБАВЬ&nbsp;СВОЕГО <span class="text-bold">ГЕРОЯ</span></h1>
             <div class="separator"><div class="line"></div><div class="line"></div></div>
         </header>
-            <form id="add-hero" class="form">
-                <p class="error-msg">Пожалуйста, заполните все поля</p>
 
-                <div class="form-inputs">
-                    <div class="form-group">
-                        <label class="form-group-label" for="name">Имя</label>
-                        <input type="text" 
-                               class="form-group-control" 
-                               id="name"
-                               data-required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-group-label" for="titul">Титул</label>
-                        <input type="text" 
-                               class="form-group-control" 
-                               id="titul"
-                               data-required>
-                    </div>
+        <form action="" id="add-hero" class="form"> 
+            <div class="form-inputs">
+                <div class="form-group">
+                    <label class="form-group-label" for="name">Имя</label>
+                    <input type="text" 
+                            class="form-group-control text-input" 
+                            id="name"
+                            data-required>
                 </div>
-                <div class="form-loading">
-                    <div class="form-group">
-                        <label class="form-group-label" for="loading">Фото</label>
-                        <input type="text" 
-                               class="form-group-loading" 
-                               id="loading"
-                               data-required 
-                               placeholder="Чтобы добавить фото героя перетащите изображение в это поле или просто кликните сюда">
-                    </div>
+                <div class="form-group">
+                    <label class="form-group-label" for="titul">Титул</label>
+                    <input type="text" 
+                            class="form-group-control text-input" 
+                            id="titul"
+                            data-required>
                 </div>
-                <div class="btn-row">
-                    <button type="submit" class="btn-submit">ПРИНЯТЬ</button>   
-                </div>                                  
-            </form>
+            </div>
+            <div class="form-loading">
+                <div class="form-group">
+                    <p class="form-group-label">Фото</p>
+                    <div class="file-upload">
+                        <label class="loader-label">
+                            <input type="file" 
+                                accept="image/*"
+                                name="file" 
+                                class="loader"
+                                data-required>
+                            <span id="placeholder">Чтобы добавить фото героя перетащите изображение в&nbsp;это поле или просто кликните сюда</span>                                                                  
+                        </label>                            
+                    </div> 
+                    <input type="text" id="filename" class="filename" disabled>                                           
+                </div>
+            </div>                
+            <p class="error-msg">Пожалуйста, заполните обязательные поля</p>
+            <button type="submit" class="btn-submit">ПРИНЯТЬ</button>                                    
+        </form>
     </div>
     
     <footer class="footer">
@@ -162,6 +165,6 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/slick-script.js"></script>
-    <script src="js/validate.js"></script>
-    </body>
+    <script src="js/script.js"></script>
+</body>
 </html>
