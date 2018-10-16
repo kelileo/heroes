@@ -4,12 +4,17 @@
   "description": "This is a test for CK",
   "main": "index.html",
   "scripts": {
-    "start":"npm run watch:all",
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "imagemin": "imagemin img/* -o dist/img",
+    "copyfiles": "copyfiles -f slick/* dist/slick", 
+    "clean": "rimraf dist",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",    
+    "build": "npm run clean && npm run imagemin && npm run copyfiles && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -22,10 +27,15 @@
   },
   "homepage": "https://github.com/kelileo/heroes#readme",
   "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
     "lite-server": "^2.4.0",
     "node-sass": "^4.7.2",
     "onchange": "^3.3.0",
-    "parallelshell": "^3.0.2"
+    "parallelshell": "^3.0.2",
+    "rimraf": "^2.6.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
   },
   "dependencies": {
     "jquery": "^3.3.1"
